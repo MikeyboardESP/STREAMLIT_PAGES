@@ -1,5 +1,9 @@
 import streamlit as st
 import base64
+from PAGES.Image_Cropper_1 import image_cropper_page
+from PAGES.Netflix_Data_Analysis_2 import netflix_analysis_page
+from PAGES.Temperatures_Dashboard_3 import temperatures_dashboard_page
+
 
 # ----- Page configs (tab title, favicon) -----
 st.set_page_config(
@@ -64,4 +68,31 @@ st.write("""
 """)
 
 # Feel free to add other points like your Linkedin, Github, Social Media, etc.
+
+# Feel free to add other points like your Linkedin, Github, Social Media, etc.
+
+if __name__ == "__main__":
+    # Seleccionar la página según la elección del usuario
+    page_options = {
+        "Home": 0,
+        "Image Cropper": 1,
+        "Netflix Data Analysis": 2,
+        "Temperatures Dashboard": 3
+    }
+
+    selected_page = st.sidebar.selectbox("Select a page", list(page_options.keys()))
+
+    # Ejecutar la página seleccionada
+    if selected_page == "Home":
+        # La página de inicio
+        pass
+    elif selected_page == "Image Cropper":
+        # Ejecutar la función correspondiente a la página del Image Cropper
+        image_cropper_page()
+    elif selected_page == "Netflix Data Analysis":
+        # Ejecutar la función correspondiente a la página del Netflix Data Analysis
+        netflix_analysis_page()
+    elif selected_page == "Temperatures Dashboard":
+        # Ejecutar la función correspondiente a la página del Temperatures Dashboard
+        temperatures_dashboard_page()
 

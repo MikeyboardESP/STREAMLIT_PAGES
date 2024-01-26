@@ -1,6 +1,12 @@
 # The library you have to use
 import numpy as np
 # Some extra libraries to build the webapp and deal with images and files
+# PAGES/Image_Cropper_1.py
+
+def image_cropper_page():
+    # Contenido de la función
+    st.write("Esta es la página del Image Cropper.")
+    # Otro contenido de la función
 
 import streamlit as st
 import io
@@ -30,7 +36,7 @@ img = st.file_uploader("Upload an image:", type=["png", "jpg", "jpeg"])
 
 if img is None:
     is_example = True
-    with Image.open("data/starry_night.png") as img:
+    with Image.open("starry_night.png") as img:
         img_arr = np.array(img)
 else:
     with Image.open(img) as img:
