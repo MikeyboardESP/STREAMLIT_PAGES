@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 from PAGES.Image_Cropper_1 import image_cropper_page
-from PAGES.Netflix_Data_Analysis_2 import netflix_analysis_page
+from PAGES.Netflix_Data_Analysis_2 import netflix_analysis_page 
 from PAGES.Temperatures_Dashboard_3 import temperatures_dashboard_page
 
 

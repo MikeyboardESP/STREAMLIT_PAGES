@@ -1,9 +1,10 @@
-# The libraries you have to use
+# the libraries you have to use
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Some extra libraries to build the webapp
+# Some extra libraries for date conversions and build the webapp
 import streamlit as st
+
 
 # ----- Page configs -----
 st.set_page_config(
@@ -98,5 +99,3 @@ if st.button("Calculate Avg Duration"):
         st.pyplot(fig)
     else:
         st.write("No movie data available.")
-
-
