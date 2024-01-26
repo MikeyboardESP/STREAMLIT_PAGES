@@ -63,6 +63,8 @@ cols1[2].metric("Missing Dir. Names", num_missing_directors)
 cols1[3].metric("Countries", n_countries)
 cols1[4].metric("Avg Title Length", round(avg_title_length, 2))
 
+# ...
+
 # ----- Pie Chart: Top year producer countries -----
 
 st.write("##")
@@ -75,9 +77,9 @@ year = cols2[0].number_input("Select a year:", min_value=min_year, max_value=max
 if st.button("Calculate Top 10 Countries"):
     top_10_countries = movies_df[movies_df['release_year'] == year]['country'].value_counts().head(10)
     if not top_10_countries.empty:
-        fig = plt.figure(figsize=(8, 8))
-        plt.pie(top_10_countries, labels=top_10_countries.index, autopct="%.2f%%")
-        plt.title(f"Top 10 Countries in {year}")
+        fig, ax = plt.subplots(figsize=(8, 8))
+        ax.pie(top_10_countries, labels=top_10_countries.index, autopct="%.2f%%")
+        ax.set_title(f"Top 10 Countries in {year}")
         st.pyplot(fig)
     else:
         st.write("No data available for the selected year.")
@@ -91,11 +93,11 @@ st.header("Avg Duration of Movies by Year")
 if st.button("Calculate Avg Duration"):
     movies_avg_duration_per_year = movies_df[movies_df['type'] == 'Movie'].groupby('release_year')['duration'].mean()
     if not movies_avg_duration_per_year.empty:
-        fig = plt.figure(figsize=(9, 6))
-        plt.plot(movies_avg_duration_per_year.index, movies_avg_duration_per_year.values)
-        plt.xlabel("Year")
-        plt.ylabel("Average Duration (minutes)")
-        plt.title("Average Duration of Movies Across Years")
+        fig, ax = plt.subplots(figsize=(9, 6))
+        ax.plot(movies_avg_duration_per_year.index, movies_avg_duration_per_year.values)
+        ax.set_xlabel("Year")
+        ax.set_ylabel("Average Duration (minutes)")
+        ax.set_title("Average Duration of Movies Across Years")
         st.pyplot(fig)
     else:
         st.write("No movie data available.")
