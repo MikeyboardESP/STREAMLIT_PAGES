@@ -1,7 +1,10 @@
 import streamlit as st
 import base64
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71f85e6c8ba48ee70b4f15e98c730baf2cde4a3a
     
 # ----- Page configs (tab title, favicon) -----
 st.set_page_config(
@@ -40,7 +43,11 @@ st.write(f"""
 
 
 # ----- Personal title or short description -----
+<<<<<<< HEAD
 current_role = "Big data & Analytics Student "  
+=======
+current_role = "Big data & Analytics student "  
+>>>>>>> 71f85e6c8ba48ee70b4f15e98c730baf2cde4a3a
 
 st.write(f"""<div style="text-align: center;"><h4><i>{current_role}</i></h4></div>""", unsafe_allow_html=True)
 
@@ -52,6 +59,7 @@ st.subheader("About Me")
 
 # TODO: Modify and adapt the following lines to your info, you can add or remove some details if you want
 st.write("""
+<<<<<<< HEAD
 - 🧑‍💻 I´m currrently studying a master related to Big Data & Analytics, despite of my business-oriented background I feel comfortable trying everyday 
          Analytical tools such as PowerBI, R-Studio, MySql, Tableau, Excel, and naturally Python, from where I´m deploying my portfolio ."
 
@@ -94,9 +102,32 @@ st.write("""
 
          
 - 🏠  Barcelona (Spain)
+=======
+- 🧑‍💻 I am a studying a master related to Big Data and analytics but
+          I am also developing my own business based on BINGO with smells."
+
+- 🛩️ prev: I have studied Economics in the University of Salamanca. On the fourth year of my grade I had the opportunity to do an erasmus in Poland and 
+         by the time I finished, I lived for one year in Copenhaguen.
+
+- ❤️ I like running and staying helthy but what in really enjoy is cooking very special fishes from different gastronomies but the spanish kitchen is my favourite.
+         I also enjoy playing card games such as Poker"
+
+- 🤖 I am developing a business with my sister based on bingo but including the experience of smelling and recognincing the smell of 
+         food, plants, spice... is a completely unknown experience for most of the assitants"
+
+- 🏂 I like cooking, doing Yoga, Mindfullnes, playing card games, ski...
+
+- 📫 mmartovi@icloud.com and I invite you to follow the instagram of my company:
+          https://www.instagram.com/elgranbingoolfativo?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA==
+         
+- 🏠 Barcelona (Spain)
+>>>>>>> 71f85e6c8ba48ee70b4f15e98c730baf2cde4a3a
 """)
 
 
 # Feel free to add other points like your Linkedin, Github, Social Media, etc.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71f85e6c8ba48ee70b4f15e98c730baf2cde4a3a
