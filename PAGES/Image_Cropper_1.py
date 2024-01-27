@@ -1,15 +1,8 @@
-# The library you have to use
 import numpy as np
-# Some extra libraries to build the webapp and deal with images and files
-
-def image_cropper_page():
-    # Contenido de la función
-    st.write("Esta es la página del Image Cropper.")
-    # Otro contenido de la función
-
 import streamlit as st
 import io
 from PIL import Image
+
 
 # ----- Page configs -----
 st.set_page_config(
@@ -32,7 +25,7 @@ img = st.file_uploader("Upload an image:", type=["png", "jpg", "jpeg"])
 
 if img is None:
     is_example = True
-    with Image.open("starry_night.png") as img:
+    with Image.open("data/starry_night.png") as img:
         img_arr = np.array(img)
 else:
     with Image.open(img) as img:
@@ -43,12 +36,11 @@ st.image(img_arr, caption="Original Image" if not is_example else "Original exam
 st.write("#")
 
 # TODO: Ex. 1.1: Get the minimum and maximum values for the vertical and horizontal ranges, so the size of the img_arr array -----
-img_arr_shape = img_arr.shape
 min_height = 0 
-max_height = img_arr_shape[0]  # TODO: Replace None with the maximum height of the image using np.shape() function
+max_height = img_arr.shape[0]  # TODO: Replace None with the maximum height of the image using np.shape() function
 
 min_width = 0
-max_width = img_arr_shape[1]    # TODO: Replace None with the maximum width of the image using np.shape() function   
+max_width = img_arr.shape[1]    # TODO: Replace None with the maximum width of the image using np.shape() function   
 
 # ----- Creating the sliders to receive the user input with the dimensions to crop the image ----- 
 if type(max_height) == int and type(max_width) == int:
